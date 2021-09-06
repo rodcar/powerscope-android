@@ -1,8 +1,8 @@
-package pe.chiararodriguez.amelia.network.responses
+package pe.powerscope.app.network.responses
 
 import java.io.Serializable
 
-data class SignInResponse(var email: String?, var id: Int, var accessToken: String?) :
+data class SignInResponse(var email: String?, var id: Int, var accessToken: String) :
     Serializable {
     constructor() : this("", 0, "")
 }

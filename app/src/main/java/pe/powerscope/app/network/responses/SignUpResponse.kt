@@ -1,4 +1,4 @@
-package pe.chiararodriguez.amelia.network.responses
+package pe.powerscope.app.network.responses
 
 import java.io.Serializable
 

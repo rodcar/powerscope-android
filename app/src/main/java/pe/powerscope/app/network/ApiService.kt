@@ -1,10 +1,10 @@
 package pe.powerscope.app.network
 
 import okhttp3.OkHttpClient
-import pe.chiararodriguez.amelia.network.requests.SignInRequest
-import pe.chiararodriguez.amelia.network.requests.SignUpRequest
-import pe.chiararodriguez.amelia.network.responses.SignInResponse
-import pe.chiararodriguez.amelia.network.responses.SignUpResponse
+import pe.powerscope.app.network.requests.SignInRequest
+import pe.powerscope.app.network.requests.SignUpRequest
+import pe.powerscope.app.network.responses.SignInResponse
+import pe.powerscope.app.network.responses.SignUpResponse
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

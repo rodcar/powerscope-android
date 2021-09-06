@@ -20,7 +20,7 @@ class UserUtil {
             return false
         }
 
-        /*
+
 
         fun authenticate(context: Context, id: Int, token: String) {
             context.apply {
@@ -31,11 +31,11 @@ class UserUtil {
 
                 with(sharedPref.edit()) {
                     putString(
-                        getString(pe.chiararodriguez.administra_t.R.string.saved_user_token_key),
+                        getString(pe.powerscope.app.R.string.saved_user_token_key),
                         token
                     )
                     putInt(
-                        getString(pe.chiararodriguez.administra_t.R.string.saved_user_id_key),
+                        getString(pe.powerscope.app.R.string.saved_user_id_key),
                         id
                     )
                     commit()
@@ -72,6 +72,6 @@ class UserUtil {
             return ""
         }
 
-         */
+
     }
 }

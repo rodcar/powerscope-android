@@ -10,15 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Powerscope">
         <activity
+            android:name=".controllers.activities.SignUpActivity"
+            android:exported="true" />
+        <activity
             android:name=".controllers.activities.SignInActivity"
             android:exported="true" />
         <activity
             android:name=".controllers.activities.HomeActivity"
-            android:exported="true" />
+            />
         <activity
             android:name=".controllers.activities.SplashScreenActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -22,10 +22,10 @@ import com.google.gson.Gson
 import pe.powerscope.app.R
 import java.util.regex.Pattern
 import kotlinx.android.synthetic.main.activity_sign_in.*
-import pe.chiararodriguez.amelia.network.requests.SignInRequest
-import pe.chiararodriguez.amelia.network.responses.ErrorResponse
-import pe.chiararodriguez.amelia.network.responses.SignInResponse
 import pe.powerscope.app.network.ApiService
+import pe.powerscope.app.network.requests.SignInRequest
+import pe.powerscope.app.network.responses.ErrorResponse
+import pe.powerscope.app.network.responses.SignInResponse
 import pe.powerscope.app.util.ResizeAnimation
 import ppe.powerscope.app.util.ValidationUtil
 import retrofit2.Call
@@ -221,6 +221,9 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun goToSignUp() {
+        val intent = Intent(this, SignUpActivity::class.java)
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+        startActivity(intent)
     }
 
     fun goToHome() {

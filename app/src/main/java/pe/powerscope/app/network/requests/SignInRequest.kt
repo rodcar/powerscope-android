@@ -1,4 +1,4 @@
-package pe.chiararodriguez.amelia.network.requests
+package pe.powerscope.app.network.requests
 
 import java.io.Serializable
 
