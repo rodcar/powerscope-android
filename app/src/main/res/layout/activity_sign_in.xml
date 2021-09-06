@@ -5,6 +5,166 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grayTheme"
     tools:context=".controllers.activities.SignInActivity">
+
+  <ImageView
+      android:id="@+id/imageViewSignInIsotipo"
+      android:layout_width="wrap_content"
+      android:layout_height="214dp"
+      android:src="@drawable/powerscope_logo"
+      app:layout_constraintBottom_toTopOf="@+id/textViewSignInWelcome"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+  <TextView
+      android:id="@+id/textViewSignInWelcome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="32dp"
+      android:layout_marginBottom="8dp"
+      android:fontFamily="@font/proxima_nova_bold"
+      android:text="Bienvenido"
+      android:textColor="@color/greenTheme"
+      android:textSize="32sp"
+      app:layout_constraintBottom_toTopOf="@id/textViewSignInWelcomeText"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent" />
+
+  <TextView
+      android:id="@+id/textViewSignInWelcomeText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="32dp"
+      android:layout_marginRight="48dp"
+      android:layout_marginBottom="24dp"
+      android:fontFamily="@font/proxima_nova_regular"
+      android:singleLine="false"
+      android:text="Registrate o inicia sesión para usar nuestra aplicación"
+      android:textColor="@color/grayDarkAmelia"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toTopOf="@id/layoutSignInForm"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutSignInForm"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toTopOf="@id/buttonSignInSignIn"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent">
+
+    <EditText
+        android:id="@+id/editTextSignInEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/edit_text_white_shape"
+        android:elevation="1dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:maxLength="254"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextSignInPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/edit_text_white_shape"
+        android:elevation="1dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:maxLength="150"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignInEmail" />
+
+    <TextView
+        android:id="@+id/textViewSignInPasswordRecoveryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:singleLine="false"
+        android:text="@string/string_textview_recovery_password"
+        android:textColor="@color/grayDarkAmelia"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignInPassword" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <Button
+      android:id="@+id/buttonSignInSignIn"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginRight="32dp"
+      android:layout_marginBottom="22dp"
+      android:background="@drawable/green_button_shape_border_ripple"
+      android:fontFamily="@font/proxima_nova_bold"
+      android:text="@string/string_button_signin"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toTopOf="@+id/textViewSignInSignUp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent" />
+
+  <Button
+      android:id="@+id/textViewSignInSignUp"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginRight="32dp"
+      android:layout_marginBottom="36dp"
+      android:background="@drawable/green_button_shape_ripple"
+      android:fontFamily="@font/proxima_nova_bold"
+      android:gravity="center"
+      android:paddingTop="8dp"
+      android:paddingBottom="8dp"
+      android:text="@string/string_text_signup"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent" />
+
+  <ProgressBar
+      android:id="@+id/progressBarSignInWaiting"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:indeterminateTint="@color/greenTheme"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>

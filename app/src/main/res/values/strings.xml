@@ -6,4 +6,18 @@
     <string name="saved_user_token_key">pe.powerscope.app.USER_TOKEN_KEY</string>
     <string name="saved_user_id_key">pe.powerscope.app.USER_ID_KEY</string>
 
+    <string name="string_text_email">Correo</string>
+    <string name="string_text_password">Contraseña</string>
+    <string name="string_button_signin">Ya tengo una cuenta</string>
+    <string name="string_text_lost_password">¿Olvidaste la contraseña?</string>
+    <string name="string_text_signup">Crear cuenta</string>
+    <string name="string_button_signup">Registrar</string>
+    <string name="string_edittext_email_validation_invalid_format">Ingrese un correo electrónico o número de celular válido</string>
+    <string name="string_edittext_password_validation_invalid_password">Ingrese una contraseña válida</string>
+    <string name="string_edittext_password_validation_invalid_lenght">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="string_edittext_password_validation_invalid_special">La contraseña debe tener al menos un caracter especial</string>
+    <string name="string_edittext_email_validation_invalid_registered">El correo electrónico ya se encuentra registrado, ingrese otro</string>
+    <string name="string_edittext_email_validation_invalid_phone_registered">El número de celular ya se encuentra registrado, ingrese otro</string>
+    <string name="string_textview_recovery_password">Olvidaste tu contraseña?</string>
+    <string name="string_video_tutorial_key">video_tutorial_key</string>
 </resources>

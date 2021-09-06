@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -48,4 +49,12 @@ dependencies {
 
     // Support for Java 8 features
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    // Validations
+    implementation 'com.basgeekball:awesome-validation:4.2'
+
+    // Network
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 }

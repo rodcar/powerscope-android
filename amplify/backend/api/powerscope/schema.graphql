@@ -1,0 +1,43 @@
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  profiles: [Profile] @connection(keyName: "byUser", fields: ["id"])
+  nam: String!
+  password: String!
+  email: String!
+  lastName: String
+}
+
+type Profile @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields: ["userId"]) {
+  id: ID!
+  userId: ID
+  hoursPerDay: Int
+  timesByWeek: Int
+}
+
+type Room @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  devices: [Device] @connection(keyName: "byRoom", fields: ["id"])
+  name: String!
+}
+
+type Device @model @auth(rules: [{allow: public}]) @key(name: "byRoom", fields: ["roomId"]) {
+  id: ID!
+  categories: [CategoryDevice] @connection(keyName: "byDevice", fields: ["id"])
+  roomId: ID
+  name: String!
+}
+
+type Category @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  devices: [CategoryDevice] @connection(keyName: "byCategory", fields: ["id"])
+  name: String!
+}
+
+type CategoryDevice @model(queries: null) @key(name: "byCategory", fields: ["categoryID", "deviceID"]) @key(name: "byDevice", fields: ["deviceID", "categoryID"]) @auth(rules: [{allow: public}, {allow: public}]) {
+  id: ID!
+  categoryID: ID!
+  deviceID: ID!
+  category: Category! @connection(fields: ["categoryID"])
+  device: Device! @connection(fields: ["deviceID"])
+}
+ 
